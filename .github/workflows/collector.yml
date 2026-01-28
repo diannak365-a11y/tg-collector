@@ -24,8 +24,8 @@ jobs:
 
       - name: Run collector
         env:
-          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
-          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TG_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          TG_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           POST_KEY: ${{ secrets.POST_KEY }}
           INGEST_URL: ${{ secrets.INGEST_URL }}
         run: |
