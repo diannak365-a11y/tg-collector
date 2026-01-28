@@ -41,7 +41,8 @@ async def handler(event):
     print("sent:", code)
 
 async def main():
-    await client.start()
+    await client.start(bot_token=os.environ["BOT_TOKEN"])
+
     print("listening:", CHANNELS)
     await client.run_until_disconnected()
 
