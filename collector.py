@@ -14,6 +14,7 @@ CHANNELS = CHANNELS = [
     'epicentrk_sale',
     'novusnews',
     'evaofficial',
+    'watsonsukraine',
     'forainfo',
     'silposilpo'
 ]
