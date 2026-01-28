@@ -6,7 +6,8 @@ API_ID = int(os.environ["TG_API_ID"])
 API_HASH = os.environ["TG_API_HASH"]
 
 POST_KEY = os.environ["POST_KEY"]
-WORKER_INGEST = os.environ["WORKER_INGEST"]
+WORKER_INGEST = os.environ.get("WORKER_INGEST") or os.environ.get("INGEST_URL")
+
 
 CHANNELS = CHANNELS = [
     'atb_market_official',
