@@ -12,7 +12,8 @@ CHANNELS = CHANNELS = [
     'atb_market_official',
     'silposilpo',
     'epicentrk_sale',
-    'novusnews'
+    'novusnews',
+    'forainfo'
 ]
 
 
