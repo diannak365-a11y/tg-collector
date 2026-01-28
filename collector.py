@@ -16,6 +16,7 @@ CHANNELS = CHANNELS = [
     'evaofficial',
     'watsonsukraine',
     'uabrocard',
+    'rozetka_official',
     'prostorua',
     'forainfo',
     'silposilpo'
