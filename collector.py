@@ -13,7 +13,8 @@ CHANNELS = CHANNELS = [
     'silposilpo',
     'epicentrk_sale',
     'novusnews',
-    'forainfo'
+    'forainfo',
+    'silposilpo'
 ]
 
 
