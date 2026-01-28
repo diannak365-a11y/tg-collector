@@ -18,6 +18,7 @@ CHANNELS = CHANNELS = [
     'uabrocard',
     'rozetka_official',
     'jyskua',
+    'VARUS_channel',
     'prostorua',
     'forainfo',
     'silposilpo'
