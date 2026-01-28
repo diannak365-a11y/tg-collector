@@ -3,7 +3,7 @@ name: Telegram Collector
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/15 * * * *"
 
 jobs:
   run-collector:
@@ -24,13 +24,14 @@ jobs:
 
       - name: Run collector
         env:
-  
           TG_API_ID: ${{ secrets.TELEGRAM_API_ID }}
           TG_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           POST_KEY: ${{ secrets.POST_KEY }}
           INGEST_URL: ${{ secrets.INGEST_URL }}
-          WORKER_INGEST: ${{ secrets.INGEST_URL }}
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-
+          # опційно:
+          # CHANNELS: "atb_market_official,silpo_online"
+          RUN_LIMIT: "10"
+          TIMEOUT_SEC: "60"
         run: |
           python collector.py
