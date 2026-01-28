@@ -1,9 +1,9 @@
 name: Telegram Collector
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
-  workflow_dispatch:
 
 jobs:
   run-collector:
@@ -24,13 +24,10 @@ jobs:
 
       - name: Run collector
         env:
-         env:
-  TG_API_ID: ${{ secrets.TELEGRAM_API_ID }}
-  TG_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
-  POST_KEY: ${{ secrets.POST_KEY }}
-  INGEST_URL: ${{ secrets.INGEST_URL }}
-  BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-
-
+          TG_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          TG_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          POST_KEY: ${{ secrets.POST_KEY }}
+          INGEST_URL: ${{ secrets.INGEST_URL }}
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
           python collector.py
