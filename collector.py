@@ -8,11 +8,13 @@ API_HASH = os.environ["TG_API_HASH"]
 POST_KEY = os.environ["POST_KEY"]
 WORKER_INGEST = os.environ["WORKER_INGEST"]
 
-CHANNELS = [
-    "atb_market_official",
-    "silposilpo",
-    "epicentrk_sale",
+CHANNELS = CHANNELS = [
+    'atb_market_official',
+    'silposilpo',
+    'epicentrk_sale',
+    'novusnews'
 ]
+
 
 client = TelegramClient("session", API_ID, API_HASH)
 
